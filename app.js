@@ -32,23 +32,29 @@ app.use(flash()); // use connect-flash for flash messages stored in session
 
 
 /* Connect to MongoDB */
-fs.readFile('.credentials.json', function processCredentials(err, content) {
-  if (err) {
-    console.log('Error loading credentials file: ' + err);
-    return;
-  };
-  // update environment with credential
-  credentials = JSON.parse(content);
-  // provess.env.MLAB_URI = credentials.MLAB_URI
+// fs.readFile('.credentials.json', function processCredentials(err, content) {
+//   if (err) {
+//     console.log('Error loading credentials file: ' + err);
+//     return;
+//   };
+//   // update environment with credential
+//   credentials = JSON.parse(content);
+//   // provess.env.MLAB_URI = credentials.MLAB_URI
 
-  mongoose.Promise = global.Promise;
-  mongoose.connect(credentials.MLAB_URI);
-  mongoose.connection.on('error', () => {
-    console.log('%s MongoDB connection error. Please make sure MongoDB is running.', chalk.red('✗'));
-    process.exit();
-  });
+//   mongoose.Promise = global.Promise;
+//   mongoose.connect(credentials.MLAB_URI);
+//   mongoose.connection.on('error', () => {
+//     console.log('%s MongoDB connection error. Please make sure MongoDB is running.', chalk.red('✗'));
+//     process.exit();
+//   });
 
-});
+// });
+
+
+mongoose.Promise = global.Promise;
+console.log(process.env.PROD_MONGODB);
+mongoose.connect(process.env.PROD_MONGODB);
+
 
 
 /**
