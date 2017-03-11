@@ -2,7 +2,6 @@ var express = require('express');
 var router = express.Router();
 
 var Video = require('../models/videomodel');
-var Variables = require('../models/data');
 
 /*
  * Controller that receives information about submitted youtube videos
