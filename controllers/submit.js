@@ -16,7 +16,7 @@ var Video = require('../models/videomodel');
         title: 'Pass It Forward'
         });
     } else {
-        res.redirect('/login');
+        res.redirect('/auth/google');
     };
 
 });
