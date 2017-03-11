@@ -2,6 +2,8 @@ var express = require('express');
 var router = express.Router();
 const embed = require('embed-video');
 
+var passport = require('passport');
+
 var Video = require('../models/videomodel');
 
 
@@ -14,7 +16,7 @@ router.get('/', function(req, res, next) {
 		if (err) return console.error(err);
 
 		res.render('videos', {
-			title: 'We are MIT',
+			title: 'Pass It Forward',
 			videos: videos,
 			helpers: {
 				embedYoutubeImg: function(options) {
@@ -23,6 +25,11 @@ router.get('/', function(req, res, next) {
 			}
 		});
 	});
+});
+
+router.get('/auth/google', passport.authenticate('google', { scope: 'profile email' }));
+router.get('/auth/google/callback', passport.authenticate('google', { failureRedirect: '/login' }), (req, res) => {
+  res.redirect(req.session.returnTo || '/');
 });
 
 module.exports = router;

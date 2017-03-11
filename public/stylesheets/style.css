@@ -33,9 +33,9 @@ h3 {
 
 /*  NAVBAR  */
 h1#navbar-title {
-  color: rgb(159,1,17);
-  font-family:'Chalkduster';
-  /*font-family: 'Roboto';*/
+  /*color: rgb(159,1,17);*/
+  /*font-family:'Chalkduster';*/
+  font-family: 'Roboto';
   font-weight: 500;
   font-size: 1.5em;
   opacity: .8;
@@ -79,7 +79,7 @@ span#nav {
   padding: 1em 6em;
   margin-bottom: 3em;
   color: white;
-  background-image: url('../images/lobby7_blur3.jpg');
+  background-image: url('../images/map2.png');
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -228,9 +228,9 @@ video {
 }
 
 h1#title {
-  color: rgb(159,1,17);
-  font-family:'Chalkduster';
-  /*font-family: 'Roboto';*/
+  /*color: rgb(159,1,17);*/
+  /*font-family:'Chalkduster';*/
+  font-family: 'Roboto';
   font-weight: 500;
   font-size: 9em;
   opacity: .8;

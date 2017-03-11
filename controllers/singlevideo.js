@@ -12,7 +12,7 @@ router.get('/:videoid', function(req, res, next) {
   Videos.findOne( {'_id': videoid}, function(err, video) {
     
     res.render('singlevideo', { 
-      title: 'We are MIT',
+      title: 'Pass It Forward',
       video: video,
       helpers: {
         embedYoutube: function(options) {

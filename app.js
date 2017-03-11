@@ -7,12 +7,8 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
-
-// add basic google analytics
-var ua = require('universal-analytics');
-var visitor = ua(process.env.GOOGLE_ANALYTICS);
-visitor.pageview("/").send()
-
+var flash    = require('connect-flash');
+var session      = require('express-session');
 
 /**
  * Create Express server.
@@ -20,42 +16,39 @@ visitor.pageview("/").send()
 var app = express();
 
 
+var passport = require('passport');
+require('./config/passport')(passport);
+
+// required for passport
+app.use(session({ secret: 'ilovescotchscotchyscotchscotch' })); // session secret
+app.use(passport.initialize());
+app.use(passport.session()); // persistent login sessions
+app.use(flash()); // use connect-flash for flash messages stored in session
+
+// routes ======================================================================
+// require('./controllers/index.js')(app, passport); // load our routes and pass in our app and fully configured passport
+
+
+
+
 /* Connect to MongoDB */
-// fs.readFile('.credentials.json', function processCredentials(err, content) {
-//   if (err) {
-//     console.log('Error loading credentials file: ' + err);
-//     return;
-//   };
-//   // update environment with credential
-//   credentials = JSON.parse(content);
-  
-//   // provess.env.MLAB_URI = credentials.MLAB_URI
-//   // var url = process.env.PROD_MONGODB || credentials.MLAB_URI
-//   var url = process.env.PROD_MONGODB 
-  
-//   mongoose.Promise = global.Promise;
-//   mongoose.connect(url);
+fs.readFile('.credentials.json', function processCredentials(err, content) {
+  if (err) {
+    console.log('Error loading credentials file: ' + err);
+    return;
+  };
+  // update environment with credential
+  credentials = JSON.parse(content);
+  // provess.env.MLAB_URI = credentials.MLAB_URI
 
+  mongoose.Promise = global.Promise;
+  mongoose.connect(credentials.MLAB_URI);
+  mongoose.connection.on('error', () => {
+    console.log('%s MongoDB connection error. Please make sure MongoDB is running.', chalk.red('✗'));
+    process.exit();
+  });
 
-//   mongoose.connection.on('error', () => {
-//     console.log('%s MongoDB connection error. Please make sure MongoDB is running.', chalk.red('✗'));
-//     process.exit();
-//   });
-
-// });
-
-
-mongoose.Promise = global.Promise;
-console.log(process.env.PROD_MONGODB);
-mongoose.connect(process.env.PROD_MONGODB);
-
-
-
-
-// mongoose.connection.on('error', () => {
-//   console.log('%s MongoDB connection error. Please make sure MongoDB is running.', chalk.red('✗'));
-//   process.exit();
-// });
+});
 
 
 /**
@@ -101,5 +94,8 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+
+
 
 module.exports = app;
