@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 var Video = require('../models/videomodel');
+var Variables = require('../models/data');
 
 /*
  * Controller that receives information about submitted youtube videos
@@ -11,9 +12,14 @@ var Video = require('../models/videomodel');
  */
 
  router.get('/', function(req, res, next) {
-    res.render('submit', {
-        title: 'We are MIT'
-    });
+    if (req.user) {
+        res.render('submit', {
+        title: 'Pass It Forward'
+        });
+    } else {
+        res.redirect('/login');
+    };
+
 });
 
 
@@ -21,22 +27,17 @@ var Video = require('../models/videomodel');
  router.post('/video', function(req, res, next) {
     
     var body = req.body;
-    body.nextQuestion;
     
     var video = new Video({
         youtubeId: getYouTubeID(body.youtubeLink),
-        speaker: body.kerberos,
-        title: body.title,
-        upvotes: body.upvotes,
-        promptString: body.promptString,
-        date: body.recordingDate,
-        mitAffiliation: body.mitAffiliation,
-        mitCourse: body.mitCourse,
+        // questionAnswered: body.promptString,
+        date: Date.now(),
         newQuestion: body.newQuestion
     });
     video.save(function(err) {
         if (err) console.log(err)
-    });    
+    }); 
+
 
     res.render('finished_submission', {
         title: 'We are MIT'

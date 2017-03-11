@@ -2,14 +2,10 @@ const mongoose = require('mongoose');
 
 
 const videoSchema = new mongoose.Schema({
-  youtubeId: String,
-  speaker: String,
-  mitAffiliation: String,
-  mitCourse: String,
-  promptString: String,
-  date: Date,
-  upvotes: Number,
-  newQuestion: String
+  youtubeId: String,  
+  date: Date, 
+  newQuestion: String,
+  questionAnswered: String
 });
 
 

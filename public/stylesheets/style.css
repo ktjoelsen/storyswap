@@ -78,7 +78,7 @@ span#nav {
 .problem-pitch {
   padding: 1em 6em;
   margin-bottom: 3em;
-  color: white;
+
   background-image: url('../images/map2.png');
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -110,7 +110,7 @@ span#nav {
 }
 
 #problem-pitch-text {
-  color: #fff;
+  
   position: absolute;
   margin-left: 3%;
   top: 12%;

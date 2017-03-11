@@ -15,6 +15,13 @@ var session      = require('express-session');
  */
 var app = express();
 
+var development_mode = false;
+if (development_mode) {
+    require('dotenv').config();
+    console.log(process.env);
+}
+
+
 
 var passport = require('passport');
 require('./config/passport')(passport);
@@ -25,30 +32,6 @@ app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
 app.use(flash()); // use connect-flash for flash messages stored in session
 
-// routes ======================================================================
-// require('./controllers/index.js')(app, passport); // load our routes and pass in our app and fully configured passport
-
-
-
-
-/* Connect to MongoDB */
-// fs.readFile('.credentials.json', function processCredentials(err, content) {
-//   if (err) {
-//     console.log('Error loading credentials file: ' + err);
-//     return;
-//   };
-//   // update environment with credential
-//   credentials = JSON.parse(content);
-//   // provess.env.MLAB_URI = credentials.MLAB_URI
-
-//   mongoose.Promise = global.Promise;
-//   mongoose.connect(credentials.MLAB_URI);
-//   mongoose.connection.on('error', () => {
-//     console.log('%s MongoDB connection error. Please make sure MongoDB is running.', chalk.red('✗'));
-//     process.exit();
-//   });
-
-// });
 
 
 mongoose.Promise = global.Promise;
