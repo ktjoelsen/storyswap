@@ -34,10 +34,6 @@ router.get('/', function(req, res, next) {
 	});
 });
 
-router.get('/auth/google', passport.authenticate('google', { scope: 'profile email' }));
-router.get('/auth/google/callback', passport.authenticate('google', { failureRedirect: '/login' }), (req, res) => {
-  res.redirect(req.session.returnTo || '/');
-});
 
 module.exports = router;
 

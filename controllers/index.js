@@ -109,7 +109,7 @@ router.post('/signup', passport.authenticate('local-signup', {
 
 // process the login form
 router.post('/login', passport.authenticate('local-login', {
-    successRedirect : '/', // redirect to the secure profile section
+    successRedirect : '/submit', // redirect to the secure profile section
     failureRedirect : '/login', // redirect back to the signup page if there is an error
     failureFlash : true // allow flash messages
 }));
@@ -120,7 +120,7 @@ router.get('/auth/google', passport.authenticate('google', { scope : ['profile',
 // the callback after google has authenticated the user
 router.get('/auth/google/callback',
     passport.authenticate('google', {
-            successRedirect : '/profile',
+            successRedirect : '/submit',
             failureRedirect : '/'
 }));
 
