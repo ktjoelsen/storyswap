@@ -11,13 +11,13 @@ var Video = require('../models/videomodel');
  */
 
  router.get('/', function(req, res, next) {
-    // if (req.user) {
+    if (req.user) {
         res.render('submit', {
         title: 'Pass It Forward'
         });
-    // } else {
-        // res.redirect('/auth/google');
-    // };
+    } else {
+        res.redirect('/auth/google');
+    };
 
 });
 
@@ -38,7 +38,7 @@ var Video = require('../models/videomodel');
         if (err) console.log(err)
     }); 
 
-    res.redirect('/video');
+    res.redirect('/');
 });
 
 
