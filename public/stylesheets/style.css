@@ -79,11 +79,11 @@ span#nav {
   padding: 1em 6em;
   margin-bottom: 3em;
 
-  background-image: url('../images/map2.png');
+/*  background-image: url('../images/map2.png');
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
+  background-size: cover;*/
   height: 250px;
 
   position: relative;
@@ -97,17 +97,7 @@ span#nav {
   font-size: 15pt;
 }
 
-#problem-pitch-overlay {
-  position: absolute;
-  background-color: black;
-  opacity: 0.1;
-  left: 0;
-  top: 0;
-  /*bottom: 20px;*/
-  overflow: none;
-  height: 100%;
-  width: 100%;
-}
+
 
 #problem-pitch-text {
   
@@ -177,36 +167,25 @@ span#nav {
 
 
 
+#problem-pitch-overlay {
+  position: absolute;
+  
+  left: 0;
+  top: 0;
+  overflow: none;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
 
 /** landng page */
 
 
-
 video#bgvid { 
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -100;
-    -ms-transform: translateX(-50%) translateY(-50%);
-    -moz-transform: translateX(-50%) translateY(-50%);
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
-    /*-webkit-filter: grayscale(90%);*/
-    /*-webkit-filter: blur(10px);*/
-    /*-moz-filter: blur(10px);*/
-    /*-o-filter: blur(10px);*/
-    /*-ms-filter: blur(10px);*/
-    -webkit-filter: contrast(110%) brightness(70%) saturate(130%);
-    filter: contrast(110%) brightness(70%) saturate(130%) blur(3px);
-    background: url(../images/mit.png) no-repeat;
-    background-size: cover; 
+  width: 125%;
 
 }
-
 
 
 video#bgvid {
@@ -218,25 +197,7 @@ video {
   display: block; 
 }
 
-@media screen and (max-device-width: 800px) {
-    html {
-      background: url(../imgages/mit.png) #000 no-repeat center center fixed;
-    }
-    #bgvid {
-      display: none;
-    }
-}
 
-h1#title {
-  /*color: rgb(159,1,17);*/
-  /*font-family:'Chalkduster';*/
-  font-family: 'Roboto';
-  font-weight: 500;
-  font-size: 9em;
-  opacity: .8;
-  text-align: center;
-  letter-spacing: .04em;
-}
 
 span {
   color: white;
