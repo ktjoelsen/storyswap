@@ -139,6 +139,13 @@ h1#navbar-title {
  
 }
 
+
+.instructions{
+  text-align:justify;
+
+}
+
+
 .video-panel-container {
   padding-left: 30px!important;
   padding-right: 30px!important;
