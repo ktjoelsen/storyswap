@@ -16,16 +16,10 @@ var Video = require('../models/videomodel');
 
         // handle error
         if (err) return console.error(err);
-
-
-        var lastQuestion = "How are you today?";
-        if(videos.length > 0) {
-            lastQuestion = videos[0].newQuestion;
-        };
         
         res.render('submit', {
           title: 'Pass It Forward',
-          lastQuestion: lastQuestion
+          videos: videos
         });
       });
     } else {
@@ -38,15 +32,18 @@ var Video = require('../models/videomodel');
  router.post('/video', function(req, res, next) {
 
     var body = req.body;
+
+    console.log(body);
     
     var video = new Video({
         youtubeId: getYouTubeID(body.youtubeLink),
-        // questionAnswered: body.promptString,
+        questionAnswered: body.questionAnswered,
         date: Date.now(),
         newQuestion: body.newQuestion,
         speaker: req.user.name
     });
-    
+    // console.log(video);
+
     video.save(function(err) {
         if (err) console.log(err)
     }); 
