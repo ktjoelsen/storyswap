@@ -25,6 +25,7 @@ router.get('/', function(req, res, next) {
 			title: 'Pass It Forward',
 			latestQuestion: videos[0].newQuestion,
 			videos: videos,
+			user: req.user,
 			helpers: {
 				embedYoutubeImg: function(options) {
 					return '<img src="https://img.youtube.com/vi/' + this.youtubeId + '/hqdefault.jpg" class="img-fluid"/>';
