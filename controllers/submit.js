@@ -18,7 +18,7 @@ var Video = require('../models/videomodel');
         if (err) return console.error(err);
         
         res.render('submit', {
-          title: 'Pass It Forward',
+          title: 'gray',
           videos: videos
         });
       });

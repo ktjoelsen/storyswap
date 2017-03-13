@@ -60,11 +60,12 @@
 					<a href="/singlevideo/{{this._id}}">
 						{{#embedYoutubeImg}}{{this}}{{/embedYoutubeImg}}
 					</a>
-					{{this.promptString}}
 					
-					<div class="caption">
-						{{this.newQuestion}}
-						<p>~{{this.speaker}}</p>
+					<div class="video-panel-caption">
+						<p class="speakerlabel">{{this.speaker}} shares</p>
+						<p class="personanswers">{{this.promptString}}</p>
+						<p class="personasks">& asks:  "{{this.newQuestion}}"</p>
+						
 					</div>
 			</div>
 		</div>

@@ -17,13 +17,13 @@ router.get('/', function(req, res, next) {
 	// all concepts from model
 	// res.render('home', {concepts: concepts});
 	res.render('videos', {
-		title: 'Pass It Forward'
+		title: 'gray'
 	});
 });
 
 router.get('/about', function(req, res, next) {
 	res.render('about', {
-		title: 'Pass It Forward'
+		title: 'gray'
 	});
 });
 
