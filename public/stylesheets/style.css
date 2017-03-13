@@ -1,5 +1,6 @@
 body {
   padding-top: 50px;
+  background-color: rgba(183,184,182,0) !important;
 }
 
 a {
@@ -14,8 +15,6 @@ h2,
 h3 {
   font-family: 'Karla', sans-serif;
 }
-
-
 
 /* Page widths */
 
@@ -52,7 +51,7 @@ span#nav {
 }
 
 .navbar {
-  background: rgba(255,255,255,.9);
+  background:rgb(45,45,45);
 
 }
 .navbar-nav > li > a {
@@ -84,7 +83,7 @@ span#nav {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;*/
-  height: 250px;
+  height: 450px;
 
   position: relative;
   /*-webkit-filter: contrast(110%) brightness(60%) saturate(130%);*/
@@ -284,7 +283,12 @@ a#videos-link:hover{
 
 
 
-
+/*FOOTER*/
+ .footer{
+  width:100%;
+  height:150px;
+  background-color:rgba(45,45,45,1);
+ }
 
 
 /* ABOUT page */
@@ -308,3 +312,5 @@ a#videos-link:hover{
   height: 10px;
   background-color: rgb(159,1,17);
 }
+
+
