@@ -1,6 +1,6 @@
 body {
   padding-top: 50px;
-  background-color: rgba(183,184,182,0) !important;
+  background-color: rgb(238, 238, 238)!important;
 }
 
 a {
@@ -103,12 +103,20 @@ h1#navbar-title {
 
 #caption-site h1 {
   font-size: 90pt;
-  margin-bottom: 0.3em;
+  margin-bottom: 0.5em;
+  color: #B3C100;
 
 }
 
 #caption-site h2 {
-  font-size: 40pt;
+  font-size: 30pt;
+}
+
+#gray-joke h2 {
+  padding-left: 7em;
+  padding-bottom: -2em;
+  margin-bottom: -2em;
+
 }
 
 
@@ -135,13 +143,16 @@ h1#navbar-title {
 .thumbnail {
   border: none!important;
   border-radius: 0!important;
-  
+  box-shadow: none!important;
+
+
  
 }
 
 .video-panel-container {
   padding-left: 30px!important;
   padding-right: 30px!important;
+
 }
 
 .video-panel {
