@@ -20,6 +20,7 @@ router.get('/', function(req, res, next) {
 			newQuestion = videos[0].newQuestion
 		};
 
+
 		res.render('videos', {
 			title: 'Pass It Forward',
 			latestQuestion: videos[0].newQuestion,

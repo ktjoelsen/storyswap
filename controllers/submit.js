@@ -11,13 +11,13 @@ var Video = require('../models/videomodel');
  */
 
  router.get('/', function(req, res, next) {
-    if (req.user) {
+    // if (req.user) {
         res.render('submit', {
         title: 'Pass It Forward'
         });
-    } else {
-        res.redirect('/auth/google');
-    };
+    // } else {
+        // res.redirect('/auth/google');
+    // };
 
 });
 
@@ -31,7 +31,8 @@ var Video = require('../models/videomodel');
         youtubeId: getYouTubeID(body.youtubeLink),
         // questionAnswered: body.promptString,
         date: Date.now(),
-        newQuestion: body.newQuestion
+        newQuestion: body.newQuestion,
+        speaker: req.user
     });
     video.save(function(err) {
         if (err) console.log(err)

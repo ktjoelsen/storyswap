@@ -5,7 +5,8 @@ const videoSchema = new mongoose.Schema({
   youtubeId: String,  
   date: Date, 
   newQuestion: String,
-  questionAnswered: String
+  promptString: String,
+  speaker: String
 });
 
 

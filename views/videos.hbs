@@ -1,6 +1,7 @@
 
 {{> navbar}}
 
+
 <div class="problem-pitch">
 	<div id="problem-pitch-overlay">
 	</div>
@@ -22,30 +23,30 @@
 
 
 <div class="container">
+	<!-- <div id="cy"></div> -->
 
 	<div class="row">	
 		{{#each videos}}
-			<!-- small box panel for each video -->
+			
 			<div class="col-md-4 col-sm-6 video-panel-container">
 				<div class="thumbnail video-panel">
-					<!-- video image itself -->
+					
 					<a href="/singlevideo/{{this._id}}">
 						{{#embedYoutubeImg}}{{this}}{{/embedYoutubeImg}}
 					</a>
-				
-					<!-- information about the video -->
+					{{this.promptString}}
+					
 					<div class="caption">
-						<h3>{{this.promptString}}</h3>
+						{{this.newQuestion}}
 						<p>~{{this.speaker}}</p>
 					</div>
 			</div>
 		</div>
 		{{/each}}
 	
-	</div> <!-- end row -->
-
+	</div> 
 
 </div>
-
-
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="http://cytoscape.github.io/cytoscape.js/api/cytoscape.js-latest/cytoscape.min.js"></script>
 <script src="/javascripts/videos.js"></script>
