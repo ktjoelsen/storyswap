@@ -33,39 +33,31 @@ h3 {
 
 /*  NAVBAR  */
 h1#navbar-title {
-  /*color: rgb(159,1,17);*/
-  /*font-family:'Chalkduster';*/
-  font-family: 'Roboto';
+  color: white;
+
+  font-family: 'Gloria Hallelujah', cursive;
   font-weight: 500;
-  font-size: 1.5em;
-  opacity: .8;
+  font-size: 1em;
   text-align: center;
   letter-spacing: .04em;
   margin-top: -.12em;
-  /*margin-bottom: 1em;*/
   padding:0;
 }
 
-span#nav {
-  color: rgb(30,30,30);
-  padding: 1.2%;
-}
 
 .navbar {
-  background: rgba(255,255,255,.9);
-
+  background: rgb(45, 45, 45);
 }
+
+
+
 .navbar-nav > li > a {
-  color: rgb(30,30,30)!important;
-  font-family: 'Roboto', sans-serif!important;
+  color: white;
+  font-family: 'Karla', sans-serif;
   text-shadow: none!important;
   font-size: 16px;
-
 }
 
-.navbar-default {
-  color: rgb(30,30,30);
-}
 
 
 .navbar-brand img {
@@ -107,11 +99,13 @@ span#nav {
 
 #caption-site {
   font-family: 'Gloria Hallelujah', cursive!important;
+  color: white;
 }
 
 #caption-site h1 {
   font-size: 90pt;
   margin-bottom: 0.3em;
+
 }
 
 #caption-site h2 {
@@ -120,17 +114,19 @@ span#nav {
 
 
 #problem-pitch-text .btn-custom {
-  padding: 1em 2em;
+  padding: 0.5em 1em;
   background-color: white;
+  font-family: 'Karla', sans-serif;
+  text-transform: uppercase;
+  font-size: 16pt;
+  color: #B3C100;;
 
 }
 
 
-#problem-pitch-text a {
-  text-decoration: none;
-}
-#problem-pitch-text .btn:hover {
-  opacity: 0.7;
+#problem-pitch-text .btn-custom:hover {
+  background-color: #B3C100;
+  color: white;
 }
 
 #problem-pitch-text .btn p {
@@ -152,10 +148,8 @@ span#nav {
 .video-panel {
   margin-bottom: 3em!important;
   padding: 0!important;
-  border-bottom: 1px solid!important;
-  border-color: red!important;
-  /*box-shadow: none!important;*/
-  /*border-radius: 0!important;*/
+  /*border-bottom: 1px solid!important;*/
+  /*border-color: red!important;*/
 }
 
 .video-panel h3 {
