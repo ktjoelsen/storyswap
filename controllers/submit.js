@@ -38,11 +38,7 @@ var Video = require('../models/videomodel');
         if (err) console.log(err)
     }); 
 
-
-    res.render('finished_submission', {
-        title: 'We are MIT'
-    });
-
+    res.redirect('/video');
 });
 
 

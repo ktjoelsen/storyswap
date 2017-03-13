@@ -15,7 +15,7 @@ var session      = require('express-session');
  */
 var app = express();
 
-var development_mode = true;
+var development_mode = false;
 if (development_mode) {
     require('dotenv').config();
     console.log(process.env);
