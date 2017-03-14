@@ -119,8 +119,8 @@ h1#navbar-title {
 
 }
 
-#instructions{
-  padding-top:1em;
+#instructions {
+  padding-top:1em!important;
 }
 
 #instructions .btn-custom {
@@ -132,7 +132,7 @@ h1#navbar-title {
   color: white;
   display:block;
   margin: 0em auto;
-  width: 75%;
+  width: 80%;
   position:relative;
 
 }
@@ -147,18 +147,22 @@ h1#navbar-title {
   margin-bottom: 0;
 }
 
+#instructions .caption {
+  padding-right: 2em;
+}
+
+
 .thumbnail {
   border: none!important;
   border-radius: 0!important;
   box-shadow: none!important;
-
-
  
 }
 
 
 #instructions{
   text-align:justify;
+  font-size: 12pt;
 
 }
 
@@ -170,7 +174,7 @@ h1#navbar-title {
 }
 
 .video-panel {
-  margin-bottom: 3em!important;
+  /*margin-bottom: 3em!important;*/
   padding: 0!important;
   /*border-bottom: 1px solid!important;*/
   /*border-color: red!important;*/
@@ -320,7 +324,7 @@ a#videos-link:hover{
 */
 @media (min-width: 1200px) {
   .thumbnail.video-panel {
-      min-height: 368px!important;
+      min-height: 395px!important;
   }
 }
 
