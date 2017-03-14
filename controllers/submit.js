@@ -32,6 +32,8 @@ var Video = require('../models/videomodel');
  router.post('/video', function(req, res, next) {
 
     var body = req.body;
+
+    console.log(body);
     
     var video = new Video({
         youtubeId: getYouTubeID(body.youtubeLink),
