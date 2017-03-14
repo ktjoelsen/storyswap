@@ -356,10 +356,12 @@ a#videos-link:hover{
 .about-page {
   margin-top: 2em;
   padding: 2em;
-  /*background-color: rgba(51, 218, 162, 0.26);  */
+
+  background-color: white;  
 }
 
-.about-page h2 {
+
+.about-page h1 {
   text-align: center;
 }
 
