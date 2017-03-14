@@ -338,6 +338,13 @@ a#videos-link:hover{
   width:100%;
   height:150px;
   background-color:rgba(45,45,45,1);
+  color:white;
+ }
+
+ #footer-text{
+  padding:1.5em auto;
+  font-family:'Gloria Hallelujah', cursive !important;
+  text-align:center;
  }
 
 
