@@ -37,7 +37,7 @@ var Video = require('../models/videomodel');
     
     var video = new Video({
         youtubeId: getYouTubeID(body.youtubeLink),
-        questionAnswered: body.questionAnswered,
+        promptString: body.questionAnswered,
         date: Date.now(),
         newQuestion: body.newQuestion,
         speaker: body.speakerName
