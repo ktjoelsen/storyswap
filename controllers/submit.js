@@ -40,7 +40,7 @@ var Video = require('../models/videomodel');
         questionAnswered: body.questionAnswered,
         date: Date.now(),
         newQuestion: body.newQuestion,
-        speaker: req.user.name
+        speaker: body.speakerName
     });
     // console.log(video);
 
