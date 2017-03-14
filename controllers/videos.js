@@ -22,7 +22,7 @@ router.get('/', function(req, res, next) {
 
 
 		res.render('videos', {
-			title: 'Pass It Forward',
+			title: 'gray',
 			latestQuestion: videos[0].newQuestion,
 			videos: videos,
 			user: req.user,
