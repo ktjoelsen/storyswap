@@ -119,24 +119,31 @@ h1#navbar-title {
 
 }
 
+#instructions{
+  padding-top:1em;
+}
 
-#problem-pitch-text .btn-custom {
+#instructions .btn-custom {
   padding: 0.5em 1em;
-  background-color: white;
+  background-color: #B3C100;
   font-family: 'Karla', sans-serif;
   text-transform: uppercase;
   font-size: 16pt;
-  color: #B3C100;;
+  color: white;
+  display:block;
+  margin: 0em auto;
+  width:50%;
+  position:relative;
 
 }
 
 
-#problem-pitch-text .btn-custom:hover {
-  background-color: #B3C100;
+#instructions .btn-custom:hover {
+  opacity:0.5;
   color: white;
 }
 
-#problem-pitch-text .btn p {
+#instructions .btn p {
   margin-bottom: 0;
 }
 
@@ -150,7 +157,7 @@ h1#navbar-title {
 }
 
 
-.instructions{
+#instructions{
   text-align:justify;
 
 }
