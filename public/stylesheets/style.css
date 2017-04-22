@@ -69,23 +69,9 @@ h1#navbar-title {
 .problem-pitch {
   padding: 1em 6em;
   margin-bottom: 3em;
-
-  
-
-/*  background-image: url('../images/map2.png');
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;*/
   height: 450px;
-
   position: relative;
-  /*-webkit-filter: contrast(110%) brightness(60%) saturate(130%);*/
-  /*filter: contrast(110%) brightness(60%) saturate(130%);*/
 }
-
-
-
 
 
 #problem-pitch-text {
@@ -93,7 +79,6 @@ h1#navbar-title {
   margin-left: 3%;
   top: 12%;
   z-index: 1;
-  
 }
 
 #caption-site {
