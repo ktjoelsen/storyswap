@@ -23,7 +23,7 @@ router.get('/', function(req, res, next) {
 
 		res.render('videos', {
 			title: 'gray',
-			latestQuestion: videos[0].newQuestion,
+			// latestQuestion: videos[0].newQuestion,
 			videos: videos,
 			user: req.user,
 			helpers: {

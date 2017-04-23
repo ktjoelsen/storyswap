@@ -12,9 +12,7 @@ p {
 }
 
 h2, 
-h3 {
-  font-family: 'Karla', sans-serif;
-}
+
 
 /* Page widths */
 
@@ -33,16 +31,13 @@ h3 {
 /*  NAVBAR  */
 h1#navbar-title {
   color: white;
-
-  font-family: 'Gloria Hallelujah', cursive;
-  font-weight: 500;
+  /*font-weight: 500;*/
   font-size: 1em;
   text-align: center;
-  letter-spacing: .04em;
+  /*letter-spacing: .04em;*/
   margin-top: -.12em;
-  padding:0;
+  /*padding:0;*/
 }
-
 
 .navbar {
   background:rgb(45,45,45);
@@ -57,12 +52,14 @@ h1#navbar-title {
   font-size: 16px;
 }
 
-
-
 .navbar-brand img {
   height: 100%;;
   width: auto;
 }
+
+
+
+
 
 /* Videos page*/
 
@@ -71,25 +68,19 @@ h1#navbar-title {
   margin-bottom: 3em;
   height: 450px;
   position: relative;
+  background-color: rgb(177, 255, 255);
 }
 
+#problem-pitch-overlay {
+  
+}
 
 #problem-pitch-text {
   position: absolute;
-  margin-left: 3%;
+  
   top: 12%;
   z-index: 1;
 }
-
-#caption-site {
-  font-family: 'Gloria Hallelujah', cursive!important;
-  color: white;
-}
-
-#caption-site h1 {
-  font-size: 90pt;
-  margin-bottom: 0.5em;
-  color: #B3C100;
 
 }
 

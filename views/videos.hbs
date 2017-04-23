@@ -4,57 +4,29 @@
 
 <div class="problem-pitch">
 
-
-	<div id="problem-pitch-overlay">
-		<video playsinline autoplay muted loop poster="../public/images/mit.png" id="bgvid" onclick="this.paused ? this.play() : this.pause();">
-	  	<source src="../public/images/mit.mp4" type="video/mp4">
-		</video>		
-	</div>
 	
 	<div id="problem-pitch-text">
-		<div id="caption-site">
-			<div id="gray-joke">
-				<h2>(there are many shades)</h2>
-			</div>
-			<h1>gray </h1>
+
+
+			<h1>Story Swap</h1>
 			
-			<h2>we celebrate diversity:  ask & answer</h2>
-		</div>
-<!-- 
-		<a href="/login" class="btn btn-default"><span class="fa fa-user"></span> Local Login</a>
-    <a href="/signup" class="btn btn-default"><span class="fa fa-user"></span> Local Signup</a>
-    <a href="/auth/google" class="btn btn-danger"><span class="fa fa-google-plus"></span> Google</a>
- -->
-    <br><br>
+			<h2>An online community where you can be authentic and real</h2>
+
+    <a href="/submit" class="btn btn-default"><span class="fa fa-user"></span> Join the video chain</a>
 		
 	</div>
-"
+
 </div>
 
 
 <div class="container">
-	<!-- <div id="cy"></div> -->
+	<div class="row">
+		<h2>Tell us a story about what makes you who you are</h2>
+	</div>
+
+
 
 	<div class="row">	
-
-
-		<div class="col-md-4 sm-6 video-panel-container">
-			<div class="thumbnail video-panel"
-				<p id="instructions">
-					<a href="/submit" class="btn btn-custom"><span class="fa fa-user"></span> Join the video chain</a>
-					<br>
-					<div class="caption">
-						<ol>
-							<li><p>Pick the question you want to answer</p></li>
-							<li><p>Answer in a video! (it can be you alone, you with you friends, or you with your <em>cat</em></p></li>
-							<li><p>Upload it to Youtube, submit it on the platform...</p></li>
-							<li><p>And get to ask <em>your</em> own question</p></li>
-						</ol>
-					</div>
-				</p>
-			</div>
-
-		</div>
 
 		{{#each videos}}
 			
@@ -66,9 +38,7 @@
 					</a>
 					
 					<div class="video-panel-caption">
-						<p class="speakerlabel">{{this.speaker}} shares</p>
-						<p class="personanswers">{{this.promptString}}</p>
-						<p class="personasks">& asks:  "{{this.newQuestion}}"</p>
+						<p class="speakerlabel">{{this.speaker}} from {{this.location}}</p>
 						
 					</div>
 			</div>
@@ -83,15 +53,9 @@
 	<div class="row">
 		<div class="col-md-12 col-sm-12">
 			<p id="footer-text">
-				gray
 				<br>
+				Story Swap
 				<br>
-				contact us:
-				<br>
-				gray@manyshades.com
-				<br>
-				<br>
-				<em>(jk the contact doesn't work, just submit a video if you wanna talk or pay for the domain)</em>
 			</p>
 		</div>
 	</div>
