@@ -15,15 +15,10 @@ router.get('/', function(req, res, next) {
 
 		// handle error
 		if (err) return console.error(err);
-		var newQuestion = "How are you today?";
-		if(videos.length > 0) {
-			newQuestion = videos[0].newQuestion
-		};
 
 
 		res.render('videos', {
 			title: 'gray',
-			// latestQuestion: videos[0].newQuestion,
 			videos: videos,
 			user: req.user,
 			helpers: {

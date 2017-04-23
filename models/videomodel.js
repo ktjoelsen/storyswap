@@ -6,7 +6,8 @@ const videoSchema = new mongoose.Schema({
   date: Date, 
   promptString: String,
   speaker: String,
-  location: String
+  location: String,
+  storytitle: String
 });
 
 

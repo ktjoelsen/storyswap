@@ -1,6 +1,6 @@
 body {
   padding-top: 50px;
-  background-color: rgb(238, 238, 238)!important;
+  /*background-color: rgb(238, 238, 238)!important;*/
 }
 
 a {
@@ -11,7 +11,7 @@ p {
   font-family: 'Muli', sans-serif;
 }
 
-h2, 
+
 
 
 /* Page widths */
@@ -61,8 +61,9 @@ h1#navbar-title {
 
 
 
-/* Videos page*/
+/* VIDEOS PAGE  */
 
+/* VIDEOS - HEADER */
 .problem-pitch {
   padding: 1em 6em;
   margin-bottom: 3em;
@@ -71,9 +72,7 @@ h1#navbar-title {
   background-color: rgb(177, 255, 255);
 }
 
-#problem-pitch-overlay {
-  
-}
+
 
 #problem-pitch-text {
   position: absolute;
@@ -82,84 +81,8 @@ h1#navbar-title {
   z-index: 1;
 }
 
-}
 
-#caption-site h2 {
-  font-size: 30pt;
-}
-
-#gray-joke h2 {
-  padding-left: 7em;
-  padding-bottom: -2em;
-  margin-bottom: -2em;
-
-}
-
-#instructions {
-  padding-top:1em!important;
-}
-
-#instructions .btn-custom {
-  padding: 0.5em 1em;
-  background-color: #B3C100;
-  font-family: 'Karla', sans-serif;
-  text-transform: uppercase;
-  font-size: 16pt;
-  color: white;
-  display:block;
-  margin: 0em auto;
-  width: 80%;
-  position:relative;
-
-}
-
-
-#instructions .btn-custom:hover {
-  opacity:0.5;
-  color: white;
-}
-
-#instructions .btn p {
-  margin-bottom: 0;
-}
-
-#instructions .caption {
-  padding-right: 2em;
-}
-
-
-.thumbnail {
-  border: none!important;
-  border-radius: 0!important;
-  box-shadow: none!important;
- 
-}
-
-
-#instructions{
-  text-align:justify;
-  font-size: 12pt;
-
-}
-
-
-.video-panel-container {
-  padding-left: 30px!important;
-  padding-right: 30px!important;
-
-}
-
-.video-panel {
-  /*margin-bottom: 3em!important;*/
-  padding: 0!important;
-  /*border-bottom: 1px solid!important;*/
-  /*border-color: red!important;*/
-}
-
-.video-panel h3 {
-  margin-top: 0;
-  font-size: 14pt;
-}
+/* VIDEOS - PANELS */
 
 .video-panel img:hover {
   opacity: 0.7;
@@ -181,158 +104,34 @@ h1#navbar-title {
     height: 100%;
 }
 
-
 .video-panel-caption {
   padding: 1em;
-}
-
-.speakerlabel {
-  margin: 0;
   color: gray;
 }
 
-.personanswers {
-  font-size: 14pt;
-  margin-top: 0;
-}
-
-#problem-pitch-overlay {
-  position: absolute;
-  
-  left: 0;
-  top: 0;
-  overflow: none;
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-}
-
-
-/** landng page */
-
-
-video#bgvid { 
-  width: 125%;
-
-}
-
-
-video#bgvid {
-    transition: 1s opacity;
-}
-.stopfade { opacity: .5; }
-
-video { 
-  display: block; 
-}
 
 
 
-span {
-  color: white;
-  padding: 1.2%;
-}
-
-button#vidpause {
-    background-color: Transparent;
-    border: none;
-    overflow: hidden;
-    outline:none;
-    font-family: 'Roboto';
-    font-weight: 900;
-    color: white;
-    font-size: 2em;
-    position: absolute;
-    bottom:2%;
-    right:2%;
-}
-
-a#videos-link {
-  color: white;
-  opacity: .8;
-  font-size: 2em;
-  text-align: center;
-  display:table;
-  margin: auto;
-  font-family: 'Roboto';
-  margin-top: 4%;
-  border: 2px solid white ;
-  padding-right: .3em;
-  padding-left: .3em;
-  padding-top: .1em;
-  padding-bottom: .1em;
-}
-
-a#videos-link:hover{
-    text-decoration: none;
-    background: rgba(50,50,50,0.5);
-
-}
-
-/*.content:before {
-  content: '';
-  position: absolute;
-  background: rgba(0, 0, 0, 0.5);
-  border-radius: 5px;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}*/
-
-/*.filter {
-  position: relative;
-  -webkit-filter: contrast(110%) brightness(110%) saturate(130%);
-  filter: contrast(110%) brightness(110%) saturate(130%);
-}
-.filter::before {
-  content: "";
-  display: block;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  position: absolute;
-  pointer-events: none;
-  mix-blend-mode: screen;
-  background: rgba(243, 106, 188, 0.5);
-}
-*/
-@media (min-width: 1200px) {
-  .thumbnail.video-panel {
-      min-height: 395px!important;
-  }
-}
-
-
-/*@media (min-width: 992px) and (max-width: 1200px){
-  .thumbnail.video-panel {
-      min-height: 317px!important;
-  }
-}*/
 
 
 
-/*FOOTER*/
+
+
+/* FOOTER */
  .footer{
-  width:100%;
-  height:150px;
-  background-color:rgba(45,45,45,1);
-  color:white;
+  height: 150px;
+  background-color: rgba(45,45,45,1);
+  color: white;
+  text-align: center;
  }
 
- #footer-text{
-  padding:1.5em auto;
-  font-family:'Gloria Hallelujah', cursive !important;
-  text-align:center;
- }
+
 
 
 /* ABOUT page */
 .about-page {
   margin-top: 2em;
   padding: 2em;
-
   background-color: white;  
 }
 
@@ -342,14 +141,7 @@ a#videos-link:hover{
 }
 
 .about-page hr {
-  /*background-color: white;*/
   height: 3px;
-}
-
-.narrow-hr {
-  width: 5em;
-  height: 10px;
-  background-color: rgb(159,1,17);
 }
 
 
