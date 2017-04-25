@@ -17,8 +17,8 @@ router.get('/', function(req, res, next) {
 		if (err) return console.error(err);
 
 
-		res.render('videos', {
-			videos: videos,
+		res.render('home', {
+			videos: videos.slice(0,3),
 			user: req.user,
 			helpers: {
 				embedYoutubeImg: function(options) {

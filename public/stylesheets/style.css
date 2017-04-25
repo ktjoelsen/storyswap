@@ -61,25 +61,16 @@ h1#navbar-title {
 
 
 
-/* VIDEOS PAGE  */
+/* HOME PAGE  */
 
-/* VIDEOS - HEADER */
-.problem-pitch {
+.about-pitch {
   padding: 1em 6em;
-  margin-bottom: 3em;
-  height: 450px;
   position: relative;
-  background-color: rgb(177, 255, 255);
 }
 
 
 
-#problem-pitch-text {
-  position: absolute;
-  
-  top: 12%;
-  z-index: 1;
-}
+
 
 
 /* VIDEOS - PANELS */
@@ -110,7 +101,11 @@ h1#navbar-title {
 }
 
 
+/* VIDEO PAGE*/
 
+#videos-container {
+  margin-top: 5em;
+}
 
 
 

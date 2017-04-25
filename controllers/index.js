@@ -6,19 +6,18 @@ var passport = require('passport');
 
 
 // middleware routes / controllers
-router.use('/', require('./videos'));
+router.use('/', require('./home'));
 router.use('/singlevideo', require('./singlevideo'));
 router.use('/upload', require('./upload'));
 router.use('/submit', require('./submit'));
+
+router.use('/videos', require('./videos'));
 
 
 // default routes
 router.get('/', function(req, res, next) {
 	// all concepts from model
-	// res.render('home', {concepts: concepts});
-	res.render('videos', {
-		title: 'gray'
-	});
+	res.render('home');
 });
 
 router.get('/about', function(req, res, next) {
