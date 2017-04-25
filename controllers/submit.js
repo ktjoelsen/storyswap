@@ -11,6 +11,17 @@ var Video = require('../models/videomodel');
  */
 
  router.get('/', function(req, res, next) {
+    // Video.find({}).sort({date: 'desc'}).exec(function (err, videos) {
+
+    //     // handle error
+    //     if (err) return console.error(err);
+        
+    //     res.render('submit', {
+    //       title: 'gray',
+    //       videos: videos
+    //     });
+    // });
+
     if (req.user) {
       Video.find({}).sort({date: 'desc'}).exec(function (err, videos) {
 
@@ -32,17 +43,14 @@ var Video = require('../models/videomodel');
  router.post('/video', function(req, res, next) {
 
     var body = req.body;
-
-    console.log(body);
     
     var video = new Video({
         youtubeId: getYouTubeID(body.youtubeLink),
-        promptString: body.questionAnswered,
+        speakerLocation: body.speakerLocation,
         date: Date.now(),
-        newQuestion: body.newQuestion,
+        storytitle: body.storytitle,
         speaker: body.speakerName
     });
-    // console.log(video);
 
     video.save(function(err) {
         if (err) console.log(err)
