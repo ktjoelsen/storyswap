@@ -14,11 +14,11 @@ router.use('/submit', require('./submit'));
 router.use('/videos', require('./videos'));
 
 
-// default routes
-router.get('/', function(req, res, next) {
-	// all concepts from model
-	res.render('home');
-});
+// // default routes
+// router.get('/', function(req, res, next) {
+// 	// all concepts from model
+// 	res.render('home');
+// });
 
 router.get('/about', function(req, res, next) {
 	res.render('about', {

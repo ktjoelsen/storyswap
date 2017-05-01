@@ -7,7 +7,8 @@ const videoSchema = new mongoose.Schema({
   promptString: String,
   speaker: String,
   speakerLocation: String,
-  storytitle: String
+  storytitle: String,
+  referredBy: String
 });
 
 

@@ -22,18 +22,10 @@ var Video = require('../models/videomodel');
     //     });
     // });
 
-    if (req.user) {
-      Video.find({}).sort({date: 'desc'}).exec(function (err, videos) {
-
-        // handle error
-        if (err) return console.error(err);
-        
-        res.render('submit', {
-          title: 'gray',
-          videos: videos
-        });
-      });
-    } else {
+    if (req.user || process.env.NODE_ENV == 'development') {
+        res.render('submit');
+    }
+    else {
       res.redirect('/auth/google');
     };
 });
