@@ -48,12 +48,16 @@ p {
 .navbar-brand img {
   height: 400%;;
   width: auto;
-  /*background: white;*/
   border-radius: 10px;
   margin-top: -20px;
 }
 
 
+.navbar-toggle .icon-bar {
+
+  background-color: #cccccc;
+
+}
 
 
 
