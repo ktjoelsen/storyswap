@@ -24,10 +24,14 @@
           <li><a href="/about">about</a></li>  
 
           <li>
-            {{#if user.local.email}}
+            {{#if user.google.email}}
               <a href="/logout">logout</a>
             {{else}}
-              <a href="/login">login</a>
+              {{#if user.local.email}
+                <a href="/logout">logout</a>
+              {{else}}
+                <a href="/login">login</a>
+              {{/if}}
             {{/if}}
 
           </li>
