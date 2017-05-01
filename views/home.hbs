@@ -2,35 +2,44 @@
 {{> navbar}}
 
 
-
-<div class="container">
-	<div class="row text-center">
-		<h2>Tell us a story about what makes you who you are</h2>
-		
-	</div>
-
-
-
-	<div class="row">	
-
-		{{#each videos}}
-			<div class="col-md-4 col-sm-6 video-panel-container">
-				<div class="thumbnail video-panel">
-					
-					<a href="/singlevideo/{{this._id}}">
-						{{#embedYoutubeImg}}{{this}}{{/embedYoutubeImg}}
-					</a>
-					
-					<div class="video-panel-caption">
-						<p>{{this.speaker}} from {{this.speakerLocation}}</p>
-						
-					</div>
+<div  class="container nopadding" id="home-header">
+	<div class="row small-top-margin small-bottom-margin">
+		<div class="col-md-5 col-md-offset-1">
+	
+			<div class="home-header-panel">
+				<iframe src="http://www.youtube.com/embed/W7qWa52k-nE" width="560" height="315" frameborder="0" allowfullscreen></iframe>
 			</div>
 		</div>
-		{{/each}}
-	</div> 
+
+		<div class="col-md-5">
+			<div id="home-header-text">
+				<h1>Tell us a story about what makes you who you are</h1>
+				<h2>The Story Swap is an online community where people can be authentic and real, exchanging personal stories through video, and engaging in discussion around shared experiences.</h2>
+			</div>
+
+			<a href="submit"><button type="button" class="btn btn-custom">Share your story</button></a>
+
+		</div>
+
+
+		
+
+<!-- 		<div class="col-md-3">
+			<div class="video-header-panel">
+				<iframe src="http://www.youtube.com/embed/eitRd2Zlvz0" frameborder="0" allowfullscreen></iframe>
+			</div>
+		</div>
+
+		<div class="col-md-3">
+			<div class="video-header-panel">
+				<iframe src="http://www.youtube.com/embed/eitRd2Zlvz0" frameborder="0" allowfullscreen></iframe>
+			</div>
+		</div> -->
+
+	</div>
 </div>
 
+ 
 
 
 <div class="about-pitch">

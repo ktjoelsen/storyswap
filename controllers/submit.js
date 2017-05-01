@@ -22,7 +22,7 @@ var Video = require('../models/videomodel');
     //     });
     // });
 
-    if (req.user.google.email) {
+    if (req.user) {
         res.render('submit', {
             user: req.user
         });
