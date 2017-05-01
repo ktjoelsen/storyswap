@@ -12,7 +12,7 @@ router.get('/:videoid', function(req, res, next) {
   Videos.findOne( {'_id': videoid}, function(err, video) {
     
     res.render('singlevideo', { 
-      title: 'gray',
+      user: req.user,
       video: video,
       helpers: {
         embedYoutube: function(options) {

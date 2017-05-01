@@ -22,11 +22,13 @@ var Video = require('../models/videomodel');
     //     });
     // });
 
-    if (req.user || process.env.NODE_ENV == 'development') {
-        res.render('submit');
+    if (req.user) {
+        res.render('submit', {
+            user: req.user
+        });
     }
     else {
-      res.redirect('/auth/google');
+      res.redirect('/login');
     };
 });
 

@@ -22,7 +22,7 @@ router.use('/videos', require('./videos'));
 
 router.get('/about', function(req, res, next) {
 	res.render('about', {
-		title: 'gray'
+         user: req.user
 	});
 });
 
@@ -45,7 +45,14 @@ router.get('/login', function(req, res) {
 
     // render the page and pass in any flash data if it exists
     // res.render('login.hbs', { message: req.flash('loginMessage') }); 
-    res.render('login.hbs'); 
+    
+
+    if (process.env.NODE_ENV == 'development') {
+        res.render('login.hbs'); 
+    }
+    else {
+      res.redirect('/auth/google');
+    };
 });
 
 // process the login form
@@ -108,7 +115,7 @@ router.post('/signup', passport.authenticate('local-signup', {
 
 // process the login form
 router.post('/login', passport.authenticate('local-login', {
-    successRedirect : '/submit', // redirect to the secure profile section
+    successRedirect : '/', // redirect to the secure profile section
     failureRedirect : '/login', // redirect back to the signup page if there is an error
     failureFlash : true // allow flash messages
 }));

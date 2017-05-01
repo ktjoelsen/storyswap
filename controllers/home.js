@@ -11,6 +11,7 @@ var Video = require('../models/videomodel');
 /* GET videos listing. */
 router.get('/', function(req, res, next) {
 
+	console.log(req.user);
 	Video.find({}).sort({date: 'desc'}).exec(function (err, videos) {
 
 		// handle error
