@@ -8,7 +8,8 @@ const videoSchema = new mongoose.Schema({
   speaker: String,
   speakerLocation: String,
   storytitle: String,
-  referredBy: String
+  referredBy: String,
+  email: String
 });
 
 
@@ -16,14 +17,6 @@ const videoSchema = new mongoose.Schema({
 const Video = mongoose.model('Videos', videoSchema);
 
 
-
-// function onInsert(err, docs) {
-//   if (err) {
-//     // TODO: handle error
-//   } else {
-//     // TODO:
-//   }
-// };
 
 
 module.exports = Video;

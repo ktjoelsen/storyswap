@@ -35,6 +35,7 @@ var Video = require('../models/videomodel');
  router.post('/video', function(req, res, next) {
 
     var body = req.body;
+
     
     var video = new Video({
         youtubeId: getYouTubeID(body.youtubeLink),
@@ -42,7 +43,8 @@ var Video = require('../models/videomodel');
         date: Date.now(),
         storytitle: body.storytitle,
         speaker: body.speakerName,
-        referredBy: body.referredBy
+        referredBy: body.referredBy,
+        email: req.user.google.email
     });
 
     video.save(function(err) {
