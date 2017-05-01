@@ -41,7 +41,8 @@ var Video = require('../models/videomodel');
         speakerLocation: body.speakerLocation,
         date: Date.now(),
         storytitle: body.storytitle,
-        speaker: body.speakerName
+        speaker: body.speakerName,
+        referredBy: body.referredBy
     });
 
     video.save(function(err) {
