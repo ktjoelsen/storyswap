@@ -3,7 +3,6 @@
 
 
 
-
 <div class="container">
 	<div class="row text-center">
 		<h2>Tell us a story about what makes you who you are</h2>
@@ -14,7 +13,6 @@
 	<div class="row">	
 
 		{{#each videos}}
-			
 			<div class="col-md-4 col-sm-6 video-panel-container">
 				<div class="thumbnail video-panel">
 					
@@ -29,17 +27,12 @@
 			</div>
 		</div>
 		{{/each}}
-	
 	</div> 
 </div>
 
 
-<hr>
 
 <div class="about-pitch">
-
-	
-	
 
 
 	<h1>Welcome to The Story Swap</h1>
@@ -82,6 +75,34 @@
 	</div>
 
 </div>
+
+<div class="container">
+	<div class="row text-center">
+		<h2>Watch more stories</h2>
+	</div>
+
+
+
+	<div class="row">	
+
+		{{#each videos}}
+			<div class="col-md-4 col-sm-6 video-panel-container">
+				<div class="thumbnail video-panel">
+					
+					<a href="/singlevideo/{{this._id}}">
+						{{#embedYoutubeImg}}{{this}}{{/embedYoutubeImg}}
+					</a>
+					
+					<div class="video-panel-caption">
+						<p>{{this.speaker}} from {{this.speakerLocation}}</p>
+						
+					</div>
+			</div>
+		</div>
+		{{/each}}
+	</div> 
+</div>
+
 
 
 
