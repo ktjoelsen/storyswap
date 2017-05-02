@@ -1,27 +1,29 @@
 {{> navbar}}
 
-<div class="narrow-page-container">
+<div class="narrow-page-container single-video-display">
 
 	<div class="row">
 		<div class="video-container">
 			{{#embedYoutube}}{{this}}{{/embedYoutube}}
 		</div>
 	</div>
-<br>
+	<br>
 	<div class="row">
-		<div class="col-sm-8">
-			<h4>{{this.video.promptString}}</h4>
-		</div>
+		<!-- <div class="col-sm-8">
+			<h4>{{this.video.storytitle}}</h4>
+		</div> -->
+		<p>{{this.video.speaker}} from {{this.video.speakerLocation}}</p>
+	</div>
 
-		<div class="col-sm-4">
-
-			<h5 class="text-right"> {{#formatDate}}{{this}}{{/formatDate}} </h5>
-		</div>
-		</div>
-	  <hr>
+	<button type="button" id="video-upvote-courageous" class="btn btn-default">Most courageous</button>
+	<button type="button" id="video-upvote-inspiring" class="btn btn-default">Most inspiring</button>
+	<button type="button" id="video-upvote-unique" class="btn btn-default">Most unique</button>
 
 		<!-- Temporarily removed upvote botton (commented out below) -->
-		<!-- <button type="button" id="video-upvote" class="btn btn-default">Upvote</button> -->
+	<br>
+	<p>courageous votes: {{this.video.votes.courageous}}</p>
+	<p>inspiring votes: {{this.video.votes.inspiring}}</p>
+	<p>unique votes: {{this.video.votes.unique}}</p>
 
 
 </div>

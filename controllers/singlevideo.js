@@ -8,7 +8,7 @@ var Videos = require('../models/videomodel');
 /* GET specific video */
 router.get('/:videoid', function(req, res, next) {
 	var videoid = req.params.videoid;
-  
+
   Videos.findOne( {'_id': videoid}, function(err, video) {
     
     res.render('singlevideo', { 
@@ -26,16 +26,17 @@ router.get('/:videoid', function(req, res, next) {
 });
 
 
-router.get('/:videoid/upvote', function(req, res, next) {
+router.get('/:videoid/upvote/:category', function(req, res, next) {
 	var videoid = req.params.videoid;
-	console.log('received request to upvote ' + videoid);
+  var category = req.params.category
+	console.log('received request to upvote ' + videoid + ' ' + category);
 
 	// check that this user has not already upvoted this video
   // TODO
 	
   // if user hasn't already upvoted the video
   Videos.findOne( {'_id': videoid}, function(err, video) {
-    video.upvotes++;
+    video.votes[category]++;
     video.save();
   });
 

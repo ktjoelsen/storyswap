@@ -46,7 +46,7 @@ p {
 }
 
 .btn-custom {
-  background-color: #6ee5f0;
+  background-color: #f06e97;
   color: white;
   font-family: 'Karla', sans-serif;
 }
@@ -120,6 +120,9 @@ p {
   font-size: 18pt;
 }
 
+#home-header button {
+  margin: 1em;
+}
 
 
 /* About */
@@ -167,6 +170,10 @@ p {
 /* VIDEO PAGE*/
 
 #videos-container {
+  margin-top: 5em;
+}
+
+.single-video-display {
   margin-top: 5em;
 }
 

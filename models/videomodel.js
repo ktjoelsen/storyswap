@@ -9,7 +9,12 @@ const videoSchema = new mongoose.Schema({
   speakerLocation: String,
   storytitle: String,
   referredBy: String,
-  email: String
+  email: String,
+  votes: {
+  	courageous: Number,
+  	inspiring: Number,
+  	unique: Number
+  }
 });
 
 
