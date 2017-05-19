@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
 
+
 const videoSchema = new mongoose.Schema({
   youtubeId: String,  
   date: Date, 
@@ -10,6 +11,8 @@ const videoSchema = new mongoose.Schema({
   storytitle: String,
   referredBy: String,
   email: String,
+  
+  // WE USED YOUR THREE CATEGORIES TO COUNT THE VOTES FOR EACH CLASS.
   votes: {
   	courageous: Number,
   	inspiring: Number,
@@ -20,8 +23,6 @@ const videoSchema = new mongoose.Schema({
 
 // Create database model
 const Video = mongoose.model('Videos', videoSchema);
-
-
 
 
 module.exports = Video;

@@ -98,7 +98,7 @@ p {
 #home-header {
   
   width: 100%;
-  background-color: black;
+  //background-color: black;
 }
 
 .home-header-panel {
@@ -116,7 +116,7 @@ p {
 }
 
 #home-header-text h2 {
-  color: #e0e0e0;
+  /*color: #e0e0e0;*/
   font-size: 18pt;
 }
 

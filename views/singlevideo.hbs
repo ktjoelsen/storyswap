@@ -1,31 +1,133 @@
 {{> navbar}}
 
 <div class="narrow-page-container single-video-display">
-
+	<p>{{this.video.speaker}} from {{this.video.speakerLocation}}</p> 
 	<div class="row">
 		<div class="video-container">
 			{{#embedYoutube}}{{this}}{{/embedYoutube}}
 		</div>
 	</div>
 	<br>
-	<div class="row">
+	<div class="row" style="width:100%">
 		<!-- <div class="col-sm-8">
 			<h4>{{this.video.storytitle}}</h4>
 		</div> -->
-		<p>{{this.video.speaker}} from {{this.video.speakerLocation}}</p>
+			<center>
+	    		<button type="button" style="background:#fae6e6" id="video-upvote-courageous" class="btn btn-default" 
+	    			onclick="this.disabled='true'; 
+	    			document.getElementById('courage_number').innerHTML = ((Number(document.getElementById('courage_number').innerHTML) + 1).toString() )
+	    			var pathname = window.location.pathname;
+				    var apiCall = pathname + '/upvote/courageous';
+					$.get(apiCall); 
+	    			">
+	    		<b>+1</b> Courageous 
+	    		(<span id="courage_number">{{this.video.votes.courageous}}</span>)
+	    		</button>
+
+				<button type="button" style="background:#e6e6fa" id="video-upvote-inspiring" class="btn btn-default" 
+					onclick="this.disabled='true'
+					document.getElementById('inspiration_number').innerHTML = ((Number(document.getElementById('inspiration_number').innerHTML) + 1).toString() )
+					var pathname = window.location.pathname;
+				  	var apiCall = pathname + '/upvote/inspiring';
+					$.get(apiCall); 
+				">
+				<b>+1</b> Inspiring 
+				(<span id="inspiration_number">{{this.video.votes.inspiring}}</span>)
+				</button>
+				
+				<button type="button" style="background:#f0e68c" id="video-upvote-unique" class="btn btn-default" 
+					onclick="this.disabled='true'
+					document.getElementById('unique_number').innerHTML = ((Number(document.getElementById('unique_number').innerHTML) + 1).toString() )
+					var pathname = window.location.pathname;
+				  	var apiCall = pathname + '/upvote/unique';
+					$.get(apiCall); 
+				">
+				<b>+1</b> Unique 
+				(<span id="unique_number">{{this.video.votes.unique}}</span>)
+				</button>
+
+			</center>
 	</div>
+	<br><br>
 
-<!-- 	<button type="button" id="video-upvote-courageous" class="btn btn-default">Most courageous</button>
-	<button type="button" id="video-upvote-inspiring" class="btn btn-default">Most inspiring</button>
-	<button type="button" id="video-upvote-unique" class="btn btn-default">Most unique</button>
 
-		
-	<br>
-	<p>courageous votes: {{this.video.votes.courageous}}</p>
-	<p>inspiring votes: {{this.video.votes.inspiring}}</p>
-	<p>unique votes: {{this.video.votes.unique}}</p> -->
+	<p><font size=5 id="leave_a_comment">Leave a Comment:</font></p>
+	<input id="comment_text" type="text" placeholder="" style="width:70%" 
+		onkeydown="if (event.keyCode == 13){makecomment()}"> 
+	</input>
+	<button style="width:20%" onclick="makecomment()">Submit
+	</button>
+	<br><br>
+	<p><font size=4>Previous Comments:</font></p>
+	<p><span id="myname" style="color:red;display:none"></span></p>
+		<p id="mycomment" style="display:none">{{this.comment}}<p>
+	<hr>
+	{{#each data}}
+		<p><span style="color:gray">{{this.commentor}} on {{this.date}} said:</span></p>
+		<p>{{this.comment}}<p>
+		<hr>
+	{{/each}}
 
 
 </div>
 
 <script src="/javascripts/singlevideo.js"></script>
+
+
+<script>
+
+
+
+function makecomment(){
+	
+uname = document.getElementById('myname');
+			uname.innerHTML=  'You just said:';
+			uname.style.display = 'block';
+
+			ucomment = document.getElementById('mycomment');
+			ucomment.innerHTML= document.getElementById('comment_text').value
+			ucomment.style.display = 'block';
+
+			document.getElementById('leave_a_comment').innerHTML = 'Change your comment:'
+			document.getElementById('comment_text').value = ''
+
+			newComment();
+
+};
+
+function newComment() {
+      console.log("CALLED: newComment");
+      
+     var new_comment = document.getElementById("mycomment").innerHTML;
+     var new_commentor = 'CURRENT_USER';
+     var new_date = new Date();
+     var new_likes = '0';
+     var new_youtubeId = '{{this.video._id}}';
+     
+     console.log(new_comment);
+     console.log(new_commentor);
+     console.log(new_date);
+     console.log(new_likes);
+     console.log(new_youtubeId);
+    $.ajax({
+    url: "/singlevideo/uploadcomment",
+          data:'comment=' + new_comment + '&commentor=' + new_commentor + '&date=' + new_date + '&likes =' + new_likes + '&youtubeid=' + new_youtubeId,
+          type: "POST",
+		  success:function(data){
+        	var success = JSON.parse(data).status;
+        	if(success == '1' ){
+        	alert('SUCCESS');
+        } else{
+          alert('SOMETHING WENT WRONG!');
+          //location.reload();
+
+        }
+	    }
+	  });
+  };
+
+
+
+
+
+</script>
